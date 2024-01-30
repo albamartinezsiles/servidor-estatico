@@ -48,4 +48,4 @@ const servidor = createServer((peticion, respuesta) => {
     }
 });
 
-servidor.listen(3000);
+servidor.listen(process.env.PORT || 3000); //env es enviroment -> process.env es un objeto que guarda TODAS las variables de entorno. Si hay una variable puerto(port) dentro usala, si no, usa la 3000. Esto va a hacer que funcione el puerto 3000 en local y uno random que te de el servidor
